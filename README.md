@@ -1,6 +1,6 @@
-# Proyecto Carro de Paro - CESFAM San Joaquín
+# Proyecto Carro de Paro - CESFAM San Juan
 
-Sistema de gestión para carro de paro de atención prehospitalaria del CESFAM San Joaquín.
+Sistema de gestión para carro de paro de atención prehospitalaria del CESFAM San Juan.
 
 ## Descripción
 
@@ -47,4 +47,4 @@ Consultar `SISTEMA V2/README_instalacion.md` para instrucciones detalladas de in
 
 ## Licencia
 
-Uso interno - CESFAM San Joaquín
+Uso interno - CESFAM San Juan
