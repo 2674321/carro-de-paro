@@ -1,0 +1,28 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment
+.env
+.env.local
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Clasp credentials (sensitive)
+.clasp.json
+
+# Temporary
+/tmp/
+*.tmp
+
+# Node
+node_modules/
