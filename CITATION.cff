@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Si utiliza este trabajo, por favor cítelo."
+title: "Sistema Carro de Paro: control de revisiones, vencimientos e inventario de emergencia"
+authors:
+  - family-names: Varela
+    given-names: Patricio
+    alias: CA2OPX
+    orcid: https://orcid.org/0009-0002-1087-9445
+version: "2.2.25"
+date-released: "2026-08-21"
+type: software
+keywords:
+  - "google-apps-script"
+  - "bomberos"
+  - "emergencias"
+  - "carro-de-paro"
+  - "inventario"
+abstract: "Aplicación Google Apps Script para el control operativo de carro de paro en instituciones de emergencia: revisiones periódicas, vencimientos de insumos, búsqueda, impresión y estadísticas."
+repository-code: "https://github.com/2674321/proyecto-carro-de-paro"
