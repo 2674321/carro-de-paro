@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: ['**']
+
+jobs:
+  sintaxis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Sintaxis GS — node --check (via copia temporal .js)
+        run: |
+          fallos=0
+          while IFS= read -r f; do
+            cp "$f" /tmp/check.js
+            node --check /tmp/check.js || { echo "ERROR de sintaxis: $f"; fallos=1; }
+          done < <(find . -type f -name '*.gs' -not -path './node_modules/*')
+          exit $fallos

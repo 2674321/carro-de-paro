@@ -1,5 +1,8 @@
 # Proyecto Carro de Paro - CESFAM San Juan
 
+[![Licencia MIT](https://img.shields.io/badge/licencia-MIT-blue)](LICENSE) ![Versión](https://img.shields.io/badge/versi%C3%B3n-v2.2.25-green) ![Estado](https://img.shields.io/badge/estado-en%20producci%C3%B3n-brightgreen) [![CI](https://github.com/2674321/carro-de-paro/actions/workflows/ci.yml/badge.svg)](https://github.com/2674321/carro-de-paro/actions/workflows/ci.yml)
+
+
 Sistema de gestión y revisión de inventario para los carros de paro del **SAPU** (Servicio de Atención Móvil de Urgencia) del CESFAM San Juan.
 
 ## Descripción
