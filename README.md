@@ -1,6 +1,6 @@
 # Proyecto Carro de Paro - CESFAM San Juan
 
-Sistema de gestión para carro de paro de atención prehospitalaria del CESFAM San Juan.
+Sistema de gestión y revisión de inventario para los carros de paro del **SAPU** (Servicio de Atención Móvil de Urgencia) del CESFAM San Juan.
 
 ## Descripción
 
@@ -18,6 +18,21 @@ Aplicación web desarrollada en Google Apps Script para la gestión del carro de
 - **Base de datos:** Google Sheets
 - **API:** Google Apps Script Web App
 
+## Capturas
+
+> Datos ficticios · capturas: agosto 2026 · SISTEMA V2
+
+![Hoja de revisiones](docs/screenshots/carro-hoja-revisiones.png)
+*Hoja de revisiones · ago 2026 · v2*
+
+![Configuraciones](docs/screenshots/carro-configuraciones.png)
+*Hoja de configuraciones · ago 2026 · v2*
+
+![Informe mensual](docs/screenshots/carro-informe-mensual.png)
+*Informe mensual · ago 2026 · v2*
+
+![Informe PDF](docs/screenshots/carro-informe-pdf.png)
+*Informe PDF generado · ago 2026 · v2*
 ## Estructura del Proyecto
 
 ```
@@ -47,4 +62,4 @@ Consultar `SISTEMA V2/README_instalacion.md` para instrucciones detalladas de in
 
 ## Licencia
 
-Uso interno - CESFAM San Juan
+MIT — ver [LICENSE](LICENSE).
