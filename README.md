@@ -1,68 +1,78 @@
-# Proyecto Carro de Paro - CESFAM San Juan
+# Carro de Paro — CESFAM San Juan
 
-[![Licencia MIT](https://img.shields.io/badge/licencia-MIT-blue)](LICENSE) ![Versión](https://img.shields.io/badge/versi%C3%B3n-v2.2.25-green) ![Estado](https://img.shields.io/badge/estado-en%20producci%C3%B3n-brightgreen) [![CI](https://github.com/2674321/carro-de-paro/actions/workflows/ci.yml/badge.svg)](https://github.com/2674321/carro-de-paro/actions/workflows/ci.yml)
+[![Licencia MIT](https://img.shields.io/badge/licencia-MIT-blue)](LICENSE) ![Versión](https://img.shields.io/badge/versi%C3%B3n-v2.2.27-green) ![Estado](https://img.shields.io/badge/estado-en%20uso-brightgreen) [![CI](https://github.com/2674321/carro-de-paro/actions/workflows/ci.yml/badge.svg)](https://github.com/2674321/carro-de-paro/actions/workflows/ci.yml)
 
+Sistema de **revisión de inventario de los carros de paro / móviles del SAPU del
+CESFAM San Juan** (urgencia ambulatoria y móviles): revisiones, stock y
+vencimientos. Construido sobre **Google Apps Script + Google Sheets**.
 
-Sistema de gestión y revisión de inventario para los carros de paro del **SAPU** (Servicio de Atención Móvil de Urgencia) del CESFAM San Juan.
+> **En uso** · v2.2.27 (VERSIÓN FINAL ESTABLE) · revisión diaria: 7 columnas de
+> cantidad, una por día de la semana.
 
-## Descripción
+## Funcionalidades
 
-Aplicación web desarrollada en Google Apps Script para la gestión del carro de paro, incluyendo:
-
-- Control de inventario de medicamentos y insumos
-- Registro de atenciones y procedimientos
-- Generación de reportes y estadísticas
-- Control de stock y vencimientos
-
-## Tecnologías
-
-- **Backend:** Google Apps Script
-- **Frontend:** HTML5 / CSS3 / JavaScript
-- **Base de datos:** Google Sheets
-- **API:** Google Apps Script Web App
+- 🗓️ **Revisión diaria** (Lun–Dom) con 7 columnas de cantidad y avance automático.
+- ⚠️ **Alertas automáticas**: REPONER / POR VENCER / VENCIDO según el último día
+  registrado y el vencimiento del insumo.
+- 🖨️ **Impresión y PDF**: registro semanal, resumen mensual por semanas, informe
+  de revisión mensual y control de vencimientos — personalizables desde CONFIG.
+- 📊 **Tablero de control**: semáforo de la semana actual, vencimientos próximos,
+  uso de los últimos 3 meses y completitud.
+- 📈 **Estadísticas**: KPIs, evolución semanal, Pareto 80/20, distribución de
+  vencimientos y comparativa FÁRMACOS vs INSUMOS.
+- 🔎 **Búsqueda en vivo** por nombre o código (farmacos e insumos) con filtro.
+- 🧾 **Bitácora de operaciones** y control de calidad automático.
+- 💾 **Datos de prueba** opcionales para probar el flujo sin tocar datos reales.
 
 ## Capturas
 
-> Datos ficticios · capturas: agosto 2026 · SISTEMA V2
+> Datos ficticios · capturas: agosto 2026 · línea SISTEMA V2
 
 ![Hoja de revisiones](docs/screenshots/carro-hoja-revisiones.png)
-*Hoja de revisiones · ago 2026 · v2*
+*Registro semanal de revisiones · ago 2026*
 
 ![Configuraciones](docs/screenshots/carro-configuraciones.png)
-*Hoja de configuraciones · ago 2026 · v2*
+*Configuración del sistema · ago 2026*
 
 ![Informe mensual](docs/screenshots/carro-informe-mensual.png)
-*Informe mensual · ago 2026 · v2*
+*Informe de revisión mensual · ago 2026*
 
 ![Informe PDF](docs/screenshots/carro-informe-pdf.png)
-*Informe PDF generado · ago 2026 · v2*
-## Estructura del Proyecto
+*PDF del informe · ago 2026*
 
+## Stack
+
+| Componente | Tecnología |
+|---|---|
+| Runtime | Google Apps Script (V8) |
+| Base de datos | Google Sheets |
+| PDF | Drive + exportación oficial de Google (respetando configuración de página) |
+| CI | GitHub Actions (`node --check` sobre los `.gs`) |
+
+## Instalación y uso
+
+La guía completa de instalación (manual en la hoja y por `clasp`), uso diario,
+menú del sistema y notas técnicas está en
+[`SISTEMA V2/README_instalacion.md`](SISTEMA%20V2/README_instalacion.md).
+
+Documentación resumida en [`INSTALL.md`](INSTALL.md).
+
+## Estructura
+
+```text
+SISTEMA V2/
+├── appsscript.json          # Manifest del proyecto Apps Script
+├── README_instalacion.md    # Guía completa de instalación y uso
+└── 00_Sistema.gs … 13_Personalizacion.gs   # 14 módulos de código
+docs/screenshots/            # Capturas (datos ficticios)
 ```
-Proyecto carro de paro - Cesfam S. J./
-├── SISTEMA V2/              # Versión 2 del sistema
-│   ├── 00_Sistema.gs        # Configuración general
-│   ├── 01_Menu.gs           # Menú principal
-│   ├── 02_Utilidades.gs     # Funciones auxiliares
-│   ├── 03_Maestros.gs       # Gestión de datos maestros
-│   ├── 04_Revisiones.gs     # Funciones de revisión
-│   ├── 05_Busqueda.gs       # Búsqueda de registros
-│   ├── 06_Impresion.gs      # Generación de documentos
-│   ├── 07_PDF.gs            # Generación de PDFs
-│   ├── 08_Selectores.gs     # Selectores de UI
-│   ├── 09_Config.gs         # Configuración del sistema
-│   ├── 10_Tablero.gs        # Dashboard/Tablero
-│   ├── 11_Estadisticas.gs   # Estadísticas y reportes
-│   ├── 12_Bitacora.gs       # Registro de actividad
-│   ├── 13_Personalizacion.gs # Personalización
-│   ├── appsscript.json      # Manifest de Apps Script
-│   └── README_instalacion.md # Guía de instalación
-```
-
-## Instalación
-
-Consultar `SISTEMA V2/README_instalacion.md` para instrucciones detalladas de instalación y configuración.
 
 ## Licencia
 
 MIT — ver [LICENSE](LICENSE).
+
+Para citar este proyecto: ver [`CITATION.cff`](CITATION.cff).
+
+---
+
+Desarrollado por [@2674321](https://github.com/2674321) · Coquimbo, Chile
