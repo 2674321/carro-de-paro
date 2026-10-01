@@ -6,8 +6,7 @@ Sistema de **revisión de inventario de los carros de paro / móviles del SAPU d
 CESFAM San Juan** (urgencia ambulatoria y móviles): revisiones, stock y
 vencimientos. Construido sobre **Google Apps Script + Google Sheets**.
 
-> **En uso** · v2.2.27 (VERSIÓN FINAL ESTABLE) · revisión diaria: 7 columnas de
-> cantidad, una por día de la semana.
+> **En uso** · v2.2.27 · revisión diaria con una columna de cantidad por día de la semana.
 
 ## Funcionalidades
 
